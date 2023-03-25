@@ -2,7 +2,6 @@
 <h1 align="center">Hi 👋, I'm Sabeen Ashraf</h1>
 <h3 align="center">With my diverse skill set in data science and advanced analytics, including expertise in predictive modeling, customer segmentation, computational intelligence, deep learning, reinforcement learning, and text mining, I am able to help businesses make better decisions, increase efficiency, predict outcomes, and improve customer experiences, identify their best customers, and then reach those customers through their most effective channels that help the business grow rapidly.</h3>
 
-<img align="right" alt="Coding" width="400" src="https://i.pinimg.com/originals/75/8f/1c/758f1cd8cede9c3e4711306fc030f4ce.gif">
 
 - 🔭 I’m currently working on **DeepUltra**
 
