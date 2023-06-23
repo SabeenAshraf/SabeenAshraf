@@ -8,11 +8,6 @@
 
 - 🌱 I’m currently learning **Text Mining**
 
-<p align="center">
-  <a href="mailto:sabeen.ash01@gmail.com"><img src="https://img.shields.io/badge/Email-sabeen.ash01%40gmail.com-blue" alt="Email"></a>
-  <a href="https://linkedin.com/in/sabeen-ashraf" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-sabeen--ashraf-blue" alt="LinkedIn"></a>
-</p>
-
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 <a href="https://linkedin.com/in/sabeen-ashraf" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="sabeen-ashraf" height="30" width="40" /></a>
