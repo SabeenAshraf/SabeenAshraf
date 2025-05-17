@@ -1,340 +1,396 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sabeen Mubashar Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <style>
-    body {
-      font-family: 'Poppins', Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sabeen Mubashar Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
 
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 20px;
-    }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-    nav {
-      background-color: #007acc;
-      padding: 10px 20px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
+        nav {
+            background-color: #007acc;
+            padding: 10px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
 
-    nav .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
 
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 10px 15px;
-      font-size: 1.2rem;
-    }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 10px 15px;
+            font-size: 1.2rem;
+        }
 
-    nav a:hover {
-      text-decoration: underline;
-    }
+        nav a:hover {
+            text-decoration: underline;
+        }
 
-    .hero {
-      background: url('hero-bg.jpg') no-repeat center center/cover;
-      color: #fff;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 0 20px;
-    }
+        .hero {
+            background: url('hero-bg.jpg') no-repeat center center/cover;
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
 
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-      color: #000;
-    }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #000;
+        }
 
-    .hero p {
-      font-size: 1.5rem;
-      margin-bottom: 30px;
-      font-weight: 500;
-      color: #000;
-    }
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            font-weight: 500;
+            color: #000;
+        }
 
-    .btn-primary {
-      background-color: #007acc;
-      color: #fff;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 5px;
-      text-transform: uppercase;
-      cursor: pointer;
-      text-decoration: none;
-      transition: 0.3s ease;
-    }
+        .btn-primary {
+            background-color: #007acc;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
 
-    .btn-primary:hover {
-      background-color: #005fa3;
-    }
+        .btn-primary:hover {
+            background-color: #005fa3;
+        }
 
-    h2 {
-      font-size: 2rem;
-      color: #007acc;
-      text-align: center;
-      margin-top: 50px;
-      text-transform: uppercase;
-    }
+        h2 {
+            font-size: 2rem;
+            color: #007acc;
+            text-align: center;
+            margin-top: 50px;
+            text-transform: uppercase;
+        }
 
-    .about {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 50px 20px;
-    }
+        .about {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 50px 20px;
+        }
 
-    .about p {
-      max-width: 800px;
-      margin-bottom: 30px;
-      font-size: 1.2rem;
-      color: #555;
-    }
+        .about p {
+            max-width: 800px;
+            margin-bottom: 30px;
+            font-size: 1.2rem;
+            color: #555;
+        }
 
-    .card-section {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-      padding: 20px;
-    }
+        .card-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
 
-    .card {
-      background: #fff;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-      padding: 20px;
-      transition: transform 0.3s ease;
-    }
+        .card {
+            background: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            position: relative;
+        }
 
-    .card:hover {
-      transform: translateY(-5px);
-    }
+        .card h3 {
+            color: #007acc;
+            margin-bottom: 10px;
+        }
 
-    .card h3 {
-      color: #007acc;
-      margin-bottom: 10px;
-    }
+        .card p {
+            font-size: 1rem;
+            color: #555;
+        }
 
-    .card p {
-      font-size: 1rem;
-      color: #555;
-    }
+        .card ul {
+            padding-left: 20px;
+            color: #555;
+        }
 
-    .card ul {
-      padding-left: 20px;
-      color: #555;
-    }
+        .card ul li {
+            margin-bottom: 10px;
+        }
 
-    .card ul li {
-      margin-bottom: 10px;
-    }
+        /* Only apply hover to cards inside links */
+        .card-link {
+            text-decoration: none;
+            color: inherit;
+        }
 
-    .footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #007acc;
-      color: #fff;
-      margin-top: 50px;
-    }
+        .card-link .card {
+            transition: all 0.3s ease;
+        }
 
-    .footer a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 10px;
-    }
+        .card-link .card:hover {
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transform: translateY(-8px) scale(1.02);
+        }
 
-    .footer a:hover {
-      text-decoration: underline;
-    }
-  </style>
+        .card-link .card h3:hover {
+            color: #005fa3;
+            text-decoration: underline;
+        }
+
+        /* Tag below title to indicate it's a live project */
+        .project-tag {
+            font-size: 0.85rem;
+            font-weight: bold;
+            color: #007acc;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #007acc;
+            color: #fff;
+            margin-top: 50px;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
+
 <body>
 
-  <nav>
-    <div class="container">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#education">Education</a>
-      <a href="#projects">Projects</a>
-      <a href="#certifications">Certifications</a>
-      <a href="#footer">Contact</a>
-    </div>
-  </nav>
+    <nav>
+        <div class="container">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
+            <a href="#projects">Projects</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#footer">Contact</a>
+        </div>
+    </nav>
 
-  <div class="hero">
-    <div class="profile-pic">
-      <img src="image.jpeg" alt="Sabeen Mubashar" style="width: 150px; height: 150px; border-radius: 50%; margin-bottom: 20px; border: 5px solid white;">
+    <div class="hero">
+        <div class="profile-pic">
+            <img src="image.jpeg" alt="Sabeen Mubashar" style="width: 150px; height: 150px; border-radius: 50%; margin-bottom: 20px; border: 5px solid white;">
+        </div>
+        <h1>Sabeen Mubashar</h1>
+        <p>Data Scientist | AI/ML Engineer | Cloud & Automation | NLP & Forecasting</p>
+        <a href="#about" class="btn-primary">Learn More</a>
     </div>
-    <h1>Sabeen Mubashar</h1>
-    <p>Data Scientist | AI/ML Engineer | Cloud & Automation | NLP & Forecasting</p>
-    <a href="#about" class="btn-primary">Learn More</a>
-  </div>
 
-  <section id="about" class="about">
-    <h2>About Me</h2>
-    <p>
-      Data Scientist with 3+ years of experience delivering scalable AI/ML solutions across aviation, e-commerce, and tech industries. 
-      Specialized in building predictive systems, automating analytics workflows, and using deep learning and NLP to solve business problems. 
-      Strong collaborator across global teams, with a focus on efficiency, performance, and real-world impact.
-    </p>
-  </section>
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>
+            Data Scientist with 3+ years of experience delivering scalable AI/ML solutions across aviation, e-commerce, and tech industries.
+            Specialized in building predictive systems, automating analytics workflows, and using deep learning and NLP to solve business problems.
+            Strong collaborator across global teams, with a focus on efficiency, performance, and real-world impact.
+        </p>
+    </section>
 
-  <section id="experience" class="experience">
-    <h2>Experience</h2>
-    <div class="card-section">
-      <div class="card">
-        <h3>Data Scientist, Associate</h3>
-        <p><strong>Shanti e Sons LDA (2024 – Present)</strong></p>
-        <ul>
-          <li>Designed and deployed predictive models on AWS with 99.9% uptime.</li>
-          <li>Improved model speed by 25% and reduced computation time by 35%.</li>
-          <li>Segmented customers using unsupervised ML, increasing sales by 12%.</li>
-          <li>Built dashboards with Python/Tableau to visualize KPIs for stakeholders.</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Data Scientist, Business Insights</h3>
-        <p><strong>NetJets (2023 – 2024)</strong></p>
-        <ul>
-          <li>Developed forecasting models for optimizing flight operations.</li>
-          <li>Created real-time anomaly detection using Python, Jenkins, AWS & Snowflake.</li>
-          <li>Analyzed 5+ years of data to identify seasonal trends and customer behavior.</li>
-          <li>Reduced manual reporting time by 85% with interactive dashboards.</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Data Scientist Intern</h3>
-        <p><strong>NetJets (2023)</strong></p>
-        <ul>
-          <li>Improved data access efficiency 4x by building a custom API.</li>
-          <li>Used clustering to detect flight data anomalies for safety analysis.</li>
-          <li>Uncovered patterns of altitude deviations to improve flight planning.</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Data Analyst</h3>
-        <p><strong>Hashlogics (2019 – 2021)</strong></p>
-        <ul>
-          <li>Used ML for trend detection and actionable insights in datasets.</li>
-          <li>Designed anomaly alert systems, improving project performance by 45%.</li>
-          <li>Developed dashboards integrated with analytics to track KPIs.</li>
-          <li>Collaborated with stakeholders to solve business challenges using ML.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-  
+    <section id="experience" class="experience">
+        <h2>Experience</h2>
+        <div class="card-section">
+            <div class="card">
+                <h3>Data Scientist, Associate</h3>
+                <p><strong>Shanti e Sons LDA (2024 – Present)</strong></p>
+                <ul>
+                    <li>Designed and deployed predictive models on AWS with 99.9% uptime.</li>
+                    <li>Improved model speed by 25% and reduced computation time by 35%.</li>
+                    <li>Segmented customers using unsupervised ML, increasing sales by 12%.</li>
+                    <li>Built dashboards with Python/Tableau to visualize KPIs for stakeholders.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Data Scientist, Business Insights</h3>
+                <p><strong>NetJets (2023 – 2024)</strong></p>
+                <ul>
+                    <li>Developed forecasting models for optimizing flight operations.</li>
+                    <li>Created real-time anomaly detection using Python, Jenkins, AWS & Snowflake.</li>
+                    <li>Analyzed 5+ years of data to identify seasonal trends and customer behavior.</li>
+                    <li>Reduced manual reporting time by 85% with interactive dashboards.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Data Scientist Intern</h3>
+                <p><strong>NetJets (2023)</strong></p>
+                <ul>
+                    <li>Improved data access efficiency 4x by building a custom API.</li>
+                    <li>Used clustering to detect flight data anomalies for safety analysis.</li>
+                    <li>Uncovered patterns of altitude deviations to improve flight planning.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Data Analyst</h3>
+                <p><strong>Hashlogics (2019 – 2021)</strong></p>
+                <ul>
+                    <li>Used ML for trend detection and actionable insights in datasets.</li>
+                    <li>Designed anomaly alert systems, improving project performance by 45%.</li>
+                    <li>Developed dashboards integrated with analytics to track KPIs.</li>
+                    <li>Collaborated with stakeholders to solve business challenges using ML.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
     <section id="education" class="education">
-    <h2>Education</h2>
-    <div class="card-section">
-      <div class="card">
-        <h3>Master’s in Data Science & Advanced Analytics</h3>
-        <p>NOVA Universidade de Lisboa, Portugal</p>
-        <p>Ranked #1 in Western Europe. Focused on ML, AI, LLMs, and research-driven solutions.</p>
-      </div>
-      <div class="card">
-        <h3>Bachelor’s in Software Engineering</h3>
-        <p>University of Gujrat, Pakistan</p>
-        <p>Graduated with strong academic performance and an A+ in the final year project.</p>
-      </div>
-      <div class="card">
-        <h3>International Scholar</h3>
-        <p>Global Undergraduate Exchange Program – Kansas State University, USA (Jan 2017 – May 2017)</p>
-        <p>Selected as a U.S. Department of State Global UGRAD scholar and studied as an international academic and cultural ambassador.</p>
-      </div>
-    </div>
-  </section>
-  
-  
-  <section id="projects" class="projects">
-  <h2>Projects</h2>
-  <div class="card-section">
-
-    <div class="card">
-      <img src="p2p-lending.png" alt="P2P Lending Project">
-      <h3>A Comprehensive Machine Learning Approach to P2P Lending</h3>
-      <p style="text-align: justify;">Delivered a comprehensive solution for P2P loan default prediction by combining traditional, ensemble, neural network, and AutoML models with Explainable AI techniques, enhanced through robust feature engineering and preprocessing to improve accuracy and interpretability.</p>
-    </div>
-
-    <div class="card">
-      <img src="cancer-detection.png" alt="Cancer Detection Project">
-      <h3>Deep Learning-Based Cancer Detection</h3>
-      <p style="text-align: justify;">Built a breast cancer classification model using the BACH dataset with transfer learning (ResNet50, InceptionV3) and a custom CNN, achieving 93.7% AUROC. Applied tailored preprocessing and augmentation to improve performance on small medical image data.</p>
-    </div>
-
-    <div class="card">
-      <img src="airbnb-listing.png" alt="Airbnb Project">
-      <h3>Text Mining for Airbnb Listing Prediction</h3>
-      <p style="text-align: justify;">Built NLP pipeline for multilingual Airbnb data to predict unlistings. Best model: KNN + BoW (F1: 77.9%). Used BERT, GPT-2, and embeddings.Built a multilingual (EN, PT, FR, ES) text classification pipeline to predict Airbnb unlistings using NLP and ML, with extensive preprocessing and feature engineering. Achieved 77.9% F1-score using KNN + BoW + Cosine Similarity, delivering a deployable model and insights for risk mitigation.</p>
-    </div>
-
-    <div class="card">
-      <img src="insurance-segmentation.png" alt="Insurance Segmentation">
-      <h3>Customer Segmentation for Insurance</h3>
-      <p style="text-align: justify;">Performed end-to-end customer segmentation using advanced preprocessing and multiple clustering methods, identifying three distinct profiles based on premiums and demographics. Delivered actionable marketing strategies and ensured strong interpretability with decision trees to enable personalized, data-driven campaign targeting.</p>
-    </div>
-
-    <div class="card">
-      <img src="wine-dashboard.png" alt="Wine Dashboard">
-      <h3>Interactive Wine Dashboard – Deployed</h3>
-      <p style="text-align: justify;">Developed and deployed a live interactive wine analytics dashboard using Plotly Dash to explore global and local trends in consumption, production, and pricing. Enabled dynamic filtering and rich visualizations to support intuitive, insight-driven analysis for consumers and industry stakeholders.</p>
-    </div>
-
-    <div class="card">
-      <img src="lush-db.png" alt="Lush Candles Database">
-      <h3>Relational Database for Lush Candles</h3>
-      <p style="text-align: justify;">Designed and implemented a relational database system for a fictional retail company using MySQL, covering customers, orders, products, and feedback. Enforced data integrity with normalization and foreign keys, built triggers for automation, and created views to support business reporting and transparency.</p>
-    </div>
-
-    <div class="card">
-      <img src="smith-prediction.png" alt="Smith Parasite ML App">
-      <h3>Smith Parasite ML Prediction App</h3>
-      <p style="text-align: justify;">Created an ML pipeline for disease prediction with 98.9% F1-score. Built a Flask web app and deployed on cloud for real-time prediction.</p>
-    </div>
-
-  </div>
-</section>
+        <h2>Education</h2>
+        <div class="card-section">
+            <div class="card">
+                <h3>Master’s in Data Science & Advanced Analytics</h3>
+                <p>NOVA Universidade de Lisboa, Portugal</p>
+                <p>Ranked #1 in Western Europe. Focused on ML, AI, LLMs, and research-driven solutions.</p>
+            </div>
+            <div class="card">
+                <h3>Bachelor’s in Software Engineering</h3>
+                <p>University of Gujrat, Pakistan</p>
+                <p>Graduated with strong academic performance and an A+ in the final year project.</p>
+            </div>
+            <div class="card">
+                <h3>International Scholar</h3>
+                <p>Global Undergraduate Exchange Program – Kansas State University, USA (Jan 2017 – May 2017)</p>
+                <p>Selected as a U.S. Department of State Global UGRAD scholar and studied as an international academic and cultural ambassador.</p>
+            </div>
+        </div>
+    </section>
 
 
-  <section id="certifications" class="certifications">
-    <h2>Certifications</h2>
-    <div class="card-section">
-      <div class="card"><h3>Python for Data Science, AI, and Development</h3><p>IBM</p></div>
-      <div class="card"><h3>Machine Learning with Python</h3><p>IBM</p></div>
-      <div class="card"><h3>Unsupervised Learning in Python</h3><p>DataCamp</p></div>
-      <div class="card"><h3>Machine Learning with Tree-Based Models</h3><p>DataCamp</p></div>
-      <div class="card"><h3>Tools for Data Science</h3><p>IBM</p></div>
-      <div class="card"><h3>Data Analysis in Python</h3><p>IBM</p></div>
-    </div>
-  </section>
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="card-section">
 
-  <footer id="footer" class="footer">
-    <p>Connect with me: 
-      <a href="mailto:sabeen.mv@gmail.com"><i class="fas fa-envelope"></i></a>
-      <a href="https://linkedin.com/in/sabeenmubashar"><i class="fab fa-linkedin"></i></a>
-      <a href="https://github.com/sabeenmubashar"><i class="fab fa-github"></i></a>
-    </p>
-  </footer>
+            <div class="card">
+                <img src="p2p-lending.png" alt="P2P Lending Project">
+                <h3>A Comprehensive Machine Learning Approach to P2P Lending</h3>
+                <p style="text-align: justify;">Delivered a comprehensive solution for P2P loan default prediction by combining traditional, ensemble, neural network, and AutoML models with Explainable AI techniques, enhanced through robust feature engineering and preprocessing to improve accuracy and interpretability.</p>
+            </div>
+
+            <a href="https://github.com/SabeenAshraf/DL-Breast-Cancer-Detection/blob/main/Breast_Cancer_Detection.ipynb" target="_blank" class="card-link">
+                <div class="card">
+                    <img src="cancer-detection.png" alt="Cancer Detection Project">
+                    <h3>Deep Learning-Based Cancer Detection</h3>
+                    <p style="text-align: justify;">Built a breast cancer classification model using the BACH dataset with transfer learning (ResNet50, InceptionV3) and a custom CNN, achieving 93.7% AUROC. Applied tailored preprocessing and augmentation to improve performance on small medical image data.</p>
+                </div>
+            </a>
+
+            <a href="https://github.com/SabeenAshraf/NLP" target="_blank" class="card-link">
+                <div class="card">
+                    <img src="airbnb-listing.png" alt="Airbnb Project">
+                    <h3>Text Mining for Airbnb Listing Prediction</h3>
+                    <p style="text-align: justify;">Built a multilingual (EN, PT, FR, ES) text classification pipeline to predict Airbnb unlistings using NLP and ML, with extensive preprocessing and feature engineering. Achieved 77.9% F1-score using KNN + BoW + Cosine Similarity, delivering a deployable model and insights for risk mitigation.</p>
+                </div>
+            </a>
+
+            <a href="https://github.com/SabeenAshraf/Data_Mining" target="_blank" class="card-link">
+                <div class="card">
+                    <img src="insurance-segmentation.png" alt="Insurance Segmentation">
+                    <h3>Customer Segmentation for Insurance</h3>
+                    <p style="text-align: justify;">Performed end-to-end customer segmentation using advanced preprocessing and multiple clustering methods, identifying three distinct profiles based on premiums and demographics. Delivered actionable marketing strategies and ensured strong interpretability with decision trees to enable personalized, data-driven campaign targeting.</p>
+                </div>
+            </a>
+
+            <a href="https://wine-dashboard.onrender.com/" target="_blank" class="card-link">
+                <div class="card">
+                    <img src="wine-dashboard.png" alt="Wine Dashboard">
+                    <h3>Interactive Wine Dashboard – Deployed</h3>
+                    <p class="project-tag">🔗 Live Project</p>
+                    <p style="text-align: justify;">Developed and deployed a live interactive wine analytics dashboard using Plotly Dash to explore global and local trends in consumption, production, and pricing. Enabled dynamic filtering and rich visualizations to support intuitive, insight-driven analysis for consumers and industry stakeholders.</p>
+                </div>
+            </a>
+
+            <a href="https://github.com/SabeenAshraf/sql-database-design-lush-candles" target="_blank" class="card-link">
+                <div class="card">
+                    <img src="lush-db.png" alt="Lush Candles Database">
+                    <h3>Relational Database for Lush Candles</h3>
+                    <p style="text-align: justify;">Designed and implemented a relational database system for a fictional retail company using MySQL, covering customers, orders, products, and feedback. Enforced data integrity with normalization and foreign keys, built triggers for automation, and created views to support business reporting and transparency.</p>
+                </div>
+            </a>
+
+            <a href="https://github.com/SabeenAshraf/End_to_End_ML_V2" target="_blank" class="card-link">
+                <div class="card">
+                    <img src="smith-prediction.png" alt="Smith Parasite ML App">
+                    <h3>Smith Parasite ML Prediction App</h3>
+                    <p style="text-align: justify;">Created an ML pipeline for disease prediction with 98.9% F1-score. Built a Flask web app and deployed on cloud for real-time prediction.</p>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <section id="certifications" class="certifications">
+        <h2>Certifications</h2>
+        <div class="card-section">
+            <div class="card">
+                <h3>Python for Data Science, AI, and Development</h3>
+                <p>IBM</p>
+            </div>
+            <div class="card">
+                <h3>Machine Learning with Python</h3>
+                <p>IBM</p>
+            </div>
+            <div class="card">
+                <h3>Unsupervised Learning in Python</h3>
+                <p>DataCamp</p>
+            </div>
+            <div class="card">
+                <h3>Machine Learning with Tree-Based Models</h3>
+                <p>DataCamp</p>
+            </div>
+            <div class="card">
+                <h3>Tools for Data Science</h3>
+                <p>IBM</p>
+            </div>
+            <div class="card">
+                <h3>Data Analysis in Python</h3>
+                <p>IBM</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer" class="footer">
+        <p>Connect with me:
+            <a href="mailto:sabeen.mv@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://linkedin.com/in/sabeenmubashar"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/sabeenmubashar"><i class="fab fa-github"></i></a>
+        </p>
+    </footer>
 
 </body>
-</html>
 
+</html>
